@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: eccube_db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  app:
+    build: .
+    container_name: eccube
+    volumes:
+      - sync-volume:/var/www/html/ec-cube
+    ports:
+      - 8080:80
+    environment:
+      - TZ=Asia/Tokyo
+      - LANG=ja_JP.UTF-8
+      - COMPOSER_PROCESS_TIMEOUT=2000
+      - ROOT_URLPATH=/ec-cube/html
+      - PHP_XDEBUG_ENABLED=1
+    stdin_open: true
+    tty: true
+    depends_on:
+      - db
+
+volumes:
+  sync-volume:
+    external: true
+  eccube-db-data:
+    driver: local

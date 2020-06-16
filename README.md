@@ -1,13 +1,15 @@
 # eccube-docker
 
 ## 準備
+*ec-cubeフォルダの作成
+利用するEC-CUBEは[ec-cube]フォルダ直下に展開すること
+
 *docker-syncのインストール
 ```docker-syncのインストール
 gem install docker-sync
 brew install fswatch
 brew install unison
 ```
-
 参考：https://qiita.com/pocari/items/0340049742927f3a94b7
 
 ## 起動方法

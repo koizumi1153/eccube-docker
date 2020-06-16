@@ -1,0 +1,8 @@
+version: '2'
+
+syncs:
+    sync-volume:
+        src: './ec-cube'
+        sync_strategy: 'native_osx'
+        sync_excludes: ['.git', '.gitignore', '.idea', 'app/cache/*', 'app/log/*']
+        sync_host_port: '5000'

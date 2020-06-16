@@ -1,0 +1,5 @@
+*.sh
+ec-cube
+.docker-sync
+data/mysql
+!data/mysql/.gitkeep
