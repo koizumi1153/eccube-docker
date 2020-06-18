@@ -40,9 +40,10 @@ dockerが立ち上がったら、
 
 Mysql内で、
 ``` 
-CREATE DATABASE idoly-pride;
-CREATE USER ip_user IDENTIFIED BY 'NrnB_(Xt7ne-N+IP';
-GRANT ALL ON idoly-pride.・ TO ip_user;
+CREATE DATABASE idoly_pride;
+CREATE USER 'ip_user'@'*';
+SET PASSWORD FOR 'ip_user'@'*' = PASSWORD('NrnB_(Xt7ne-N+IP');
+GRANT ALL ON idoly_pride.* TO ip_user;
 ```
 
 ## その他
