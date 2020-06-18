@@ -15,7 +15,7 @@ services:
     build: .
     container_name: eccube
     volumes:
-      - ./ec-cube:/var/www/html/ec-cube
+      - sync-volume:/var/www/html/ec-cube
     ports:
       - 8080:80
     environment:
@@ -30,5 +30,7 @@ services:
       - db
 
 volumes:
+  sync-volume:
+    external: true
   eccube-db-data:
     driver: local
