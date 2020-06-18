@@ -48,3 +48,9 @@ GRANT ALL ON idoly-pride.・ TO ip_user;
 ## その他
 appコンテナに入るには
 `docker exec -it docker_app_1 bash`
+
+## Sequel Pro等でDBアクセス
+ホスト： `127.0.0.1`
+ユーザー名： `ip_user`
+パスワード： `NrnB_(Xt7ne-N+IP`
+データベース： `idoly-pride`
