@@ -4,3 +4,4 @@ RUN apt-get update && \
     libzip-dev \
     && docker-php-ext-install pdo_mysql mysqli mbstring zip \
     && a2enmod rewrite
+COPY --from=composer /usr/bin/composer /usr/bin/composer

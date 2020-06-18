@@ -36,13 +36,14 @@ dockerが立ち上がったら、
 `docker exec -it eccube_db bash`
 
 コンテナ内で、
-`mysql -u root -ppassword`
+`mysql -u root -p`
+※password
 
 Mysql内で、
 ``` 
 CREATE DATABASE idoly_pride;
-CREATE USER 'ip_user'@'*';
-SET PASSWORD FOR 'ip_user'@'*' = PASSWORD('NrnB_(Xt7ne-N+IP');
+CREATE USER 'ip_user'@'%';
+SET PASSWORD FOR 'ip_user'@'%' = PASSWORD('NrnB_(Xt7ne-N+IP');
 GRANT ALL ON idoly_pride.* TO ip_user;
 ```
 
